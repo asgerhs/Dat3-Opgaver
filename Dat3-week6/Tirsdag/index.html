@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Start Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+<body>
+    <div id="names">
+    
+    </div>
+    
+    <div id="namesAndNum">
+                
+                
+    </div>
+
+    <div id="filterAssign">
+
+    </div>
+
+    <button id="filterBtn" onclick="nameFilter(names)">click me</button>
+    <script>
+    //Table names and phone # opgave.
+    var namesWithPhone = [{name:"Lars",phone:"1234567"}, {name: "Peter",phone: "675843"}, {name: "Jan", phone: "98547"},{name: "Bo", phone: "79345"}];
+
+    var namesWPResult = "<table> <tr> <th>name</th> <th>phone</th> </tr> <tr>" 
+    + namesWithPhone.map(x => "<tr> <td>" + x.name + "</td> <td>" + x.phone + "</td> </tr>")
+    .join(' ') + "</tr> </table>";
+    
+
+    //Ankor elements opgaven
+    var names = ["Andreas", "Asger", "Martin", "William", "Henning"];
+    var ankor = "<nav> \n" + names.map(x => "<a href=\"\">" + x +"</a>").join('\n ') + "</nav>";
+    
+
+    document.getElementById("namesAndNum").innerHTML = namesWPResult;
+    document.getElementById("names").innerHTML = ankor;
+    document.getElementById("filterAssign").innerHTML = names;
+
+    //document.getElementById("filterBtn").addEventListener("click", nameFilter(names));
+
+    var nameFilter = function(array){
+        document.getElementById("filterAssign").innerHTML = array.filter(x => x.toLowerCase().includes("a"));
+    };
+    </script>
+</body>
+</html>
