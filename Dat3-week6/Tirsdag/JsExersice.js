@@ -99,20 +99,15 @@ console.log(all.join('#'));
 var number = [2, 3, 67, 33];
 console.log(number.reduce((x, y) => x + y));
 
-//5.c IKKE LØST
+//5.c 
 var members = [
     {name : "Peter", age: 18},
     {name : "Jan", age: 35},
     {name : "Janne", age: 25},
     {name : "Martin", age: 22}];
 
-    //Har prøvet 9 forskellige løsninger, og har ikke kunne fået nogle af dem til at virke
-    //Dette er den sidste jeg har prøvet. 
-    console.log(members.reduce((x, y) => {
-        var  sum = x.age + y.age;
-        return sum.valueOf();
-        
-    }));
+   
+    console.log(members.reduce((x, {age}) => x + age, 0) / members.length);
 
 //5.d IKKE LØST
 /*
