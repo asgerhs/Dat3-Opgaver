@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    <div class="topnav">
+        <a id="all" class="active" href="#all">All</a>
+        <a id="single"  href="#single">Single</a>
+        <a id="add" href="#add">Add</a>
+        <a id="edit" href="#edit">Edit</a>
+        <a id="delete" href="#delete">Delete</a>
+    </div>
+</head>
+    
+    </body>
+    <div id="tableDiv" class="container">
+        <table id="userTable"></table>
+    </div>
+
+    <div id="fieldAndButton" class="container" style="display: none">
+
+        <input id="idField" type="number" placeholder="Type user ID">
+        <button id="fieldBtn">Go</button>
+    </div>
+
+    <div id="addingFieldAndButton" class="container" style="display: none">
+        Name: 
+        <input id="name" type="text">
+        <button id="addBtn">Add Person</button>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

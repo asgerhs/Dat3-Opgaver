@@ -109,26 +109,14 @@ var members = [
    
     console.log(members.reduce((x, {age}) => x + age, 0) / members.length);
 
-//5.d IKKE LØST
-/*
+//5.d 
+
 var votes = [ "Clinton","Trump","Clinton","Clinton","Trump","Trump","Trump","None"];
 const count = votes.reduce((tally, cand) => {
     tally[cand] = (tally[cand] || 0) + 1;
     return tally;
-});
+}, {});
 console.log(count);
-
-
-const counting = votes.reduce(function(){
-    var tally = [];
-    for (let i = 0; i < arr.length; i++) {
-        var a = votes[i];
-        tally[a] = (tally[a] || 0) + 1;
-    }
-    return tally;
-});
-console.log(counting);
-*/
 
 //6
 
