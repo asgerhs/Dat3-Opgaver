@@ -136,6 +136,33 @@ public/
 # DynamoDB Local files
 .dynamodb/
 
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_componets
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
 # End of https://www.gitignore.io/api/macos,netbeans,java-web
 .DS_Store
 Dat3-week5/Friday/ORM_JPA/nb-configuration.xml
