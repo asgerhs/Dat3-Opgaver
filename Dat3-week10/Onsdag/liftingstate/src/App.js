@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TodoList from "./TodoList"
@@ -24,23 +24,35 @@ function App() {
       todoToEdit.todoText = todo.todoText;
     }
     setTodos([...todos]);
-    setNewTodo({id:"", todoText:""})
+    setNewTodo({ id: "", todoText: "" })
   };
-  
+
+  const deleteTodo = (todo) => {
+    setTodos(todos.filter(event => event.id !== todo));
+  };
+
+  const editTodo = (todo) => {
+    setNewTodo({ id: todo, todoText: "" });
+  };
+
+
   return (
     <div className="container outer">
-      <h2 style={{ textAlign: "center", marginBottom:25 }}>
+      <h2 style={{ textAlign: "center", marginBottom: 25 }}>
         Props and Lifting State Demo
       </h2>
 
       <div className="row">
         <div className="col-6 allTodos">
-          <TodoList todos={todos} />
+          <TodoList todos={todos}
+            deleteTodo={deleteTodo}
+            editTodo={editTodo} />
+
         </div>
         <div className="col-5 new-todo">
           <NewTodo
             addTodo={addTodo}
-            nextTodo={newTodo}            
+            nextTodo={newTodo}
           />
         </div>
       </div>
